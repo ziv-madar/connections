@@ -1,36 +1,24 @@
 #include <stdio.h>
-#include "my_mat.c"
+#include "my_mat.h"
 
+int main() {
 
-int main(){
+    char program = '\0';
+    int i, j;
 
-    char program;
-    int i,j;
-
-
-    while (program != 'D')
-    {
-        scanf("%c",&program);
-        if (program == 'A')
-        {
+    while (program != 'D') {
+        scanf("%c", &program);
+        if (program == 'A') {
             A();
         }
-        if (program == 'B')
-        {
-            scanf("%d %d", &i , &j);
-            if(B(i,j) == 0){
-                printf("false");
-            }
-            else printf("true");
+        if (program == 'B') {
+            scanf("%d %d", &i, &j);
+            printf(B(i, j) == 0 ? "False\n" : "True\n");
         }
-        if(program == 'C')
-        {
-            scanf("%d %d", &i , &j);
-            printf("%d",C(i,j));
+        if (program == 'C') {
+            scanf("%d %d", &i, &j);
+            printf("%d\n", C(i, j));
         }
-        
-          
     }
-
-    return 1;
+    return 0;
 }
