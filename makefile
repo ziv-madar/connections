@@ -4,5 +4,5 @@ connections: main.c my_mat.c
 	gcc -Wall -o $@ $^
 
 test: connections
-	./$< < IO_examples/inputs/input1.txt | diff - IO_examples/outputs/output1.txt
-	./$< < IO_examples/inputs/input2.txt | diff - IO_examples/outputs/output2.txt
+	./$< < validation/inputs/input1.txt | diff - validation/outputs/output1.txt
+	./$< < validation/inputs/input2.txt | diff - validation/outputs/output2.txt
